@@ -8,14 +8,14 @@ const initialState = {
 }
 
 export const fetchUser = createAsyncThunk('user/fetchUser', async (token) => {
-    return axios.get(`${import.meta.env.VITE_API_URL}/user`, {
+    return axios.get(`${import.meta.env.VITE_URL}/user`, {
         headers: {
             Authorization: token
         }
     }).then((res) => {
         localStorage.setItem('username', JSON.stringify(res.data.user.userName));
         return res.data;
-    })
+    }).catch(err => console.log(err))
 })
 
 const userSlice = createSlice({
