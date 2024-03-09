@@ -3,10 +3,12 @@ import { useDispatch } from 'react-redux'
 import { fetchUser } from './Reducers/userReducer'
 import { useNavigate } from 'react-router-dom'
 import Navbar from './Components/Navbar/navbar'
+import loadingGif from './assets/loading.svg'
 
 function App() {
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
     async function fetch() {
       const token = localStorage.getItem('token')
@@ -17,12 +19,20 @@ function App() {
       else {
         navigate('/login')
       }
+      setLoading(false)
     }
     fetch()
   }, [])
   return (
     <>
-      <Navbar/>
+      {
+        loading ?
+          <img src={loadingGif} alt="loading" />
+          :
+          <>
+            <Navbar />
+          </>
+      }
     </>
   )
 }
