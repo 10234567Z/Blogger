@@ -4,6 +4,7 @@ import { fetchUser } from './Reducers/userReducer'
 import { useNavigate } from 'react-router-dom'
 import Navbar from './Components/Navbar/navbar'
 import loadingGif from './assets/loading.svg'
+import Main from './Components/Blogs/blogs'
 
 function App() {
   const dispatch = useDispatch()
@@ -12,7 +13,6 @@ function App() {
   useEffect(() => {
     async function fetch() {
       const token = localStorage.getItem('token')
-      console.log(token)
       if (token) {
         dispatch(fetchUser(token))
       }
@@ -31,6 +31,7 @@ function App() {
           :
           <>
             <Navbar />
+            <Main />
           </>
       }
     </>

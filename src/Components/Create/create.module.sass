@@ -1,0 +1,62 @@
+.main
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    gap: 50px
+    ref: &
+    & h3
+        font-size: 3rem
+        margin: 0
+        padding: 0
+    & form
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        gap: 20px
+        & input
+            width: 75%
+            padding: 5px
+            border-radius: 5px
+            border: 1px solid #000
+            font-size: 1.4rem
+            text-align: center
+            &:focus
+                outline: none
+        & label
+            font-size: 1.5rem
+        & textarea
+            width: 50%
+            padding: 5px
+            border-radius: 5px
+            border: 1px solid #000
+            font-size: 1rem
+            resize: none
+            &:focus
+                outline: none
+        & div
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            gap: 20px
+        & .publish
+            flex-direction: row
+        & input[type="radio"]
+            width: 20px
+            height: 20px
+            border-radius: 5px
+            &:focus
+                outline: none
+        & button
+            padding: 15px
+            border-radius: 5px
+            border: 1px solid #ff6f6f
+            background-color: #ff6f6f
+            font-size: 1.5rem
+            cursor: pointer
+            &:hover
+                background-color: #ff5b5b
+                color: #fff
+                transition: all 0.4s linear

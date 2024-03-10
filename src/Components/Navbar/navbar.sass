@@ -35,9 +35,13 @@ nav > ul
         position: relative
         display: flex
         justify-content: flex-end
+        align-items: center
         & > li
             margin: 10px
             position: relative
+            padding: 5px
+            border-radius: 5px
+            background-color: #ffc79383
         & > li  h3
             z-index: 1
             pointer-events: none
@@ -65,3 +69,16 @@ nav > ul
         & > li:hover::after
             width: 20%
             transition: width 0.4s linear
+
+.username
+    background-color: #e7a4a4
+    padding: 5px
+    border-radius: 5px
+    ref: &
+    & > h3
+        font-size: 2rem
+        margin: 0
+        padding: 0
+        pointer-events: none
+    &:hover::after
+        width: 90%
