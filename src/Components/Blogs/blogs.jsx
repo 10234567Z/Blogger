@@ -8,6 +8,7 @@ import editImg from '../../assets/edit.svg'
 
 export default function Main() {
     const user = useSelector((state) => state.user);
+    console.log(user)
     return (
         <>
             <ul className={style.ul}>
@@ -22,7 +23,7 @@ export default function Main() {
                                             <img src={commentImage} alt="comments" height="25px" width="25px" />
                                             <p>{blog.comments.length}</p>
                                         </div>
-                                        <Link to={`/blogs/${blog._id}`} style={{ textDecoration: "none" }}>
+                                        <Link to={`/delete/${blog._id}`} style={{ textDecoration: "none" }}>
                                             <img src={deleteImg} alt="delete" height="25px" width="25px" />
                                         </Link>
                                         <Link to={`/edit/${blog._id}`} style={{ textDecoration: "none" }}>

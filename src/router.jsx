@@ -6,6 +6,7 @@ import Error from "./Components/error";
 import Logout from "./Components/logout";
 import Create from "./Components/Create/create";
 import Delete from "./Components/delete";
+import Edit from "./Components/Edit/edit";
 
 export default function Router() {
 
@@ -36,10 +37,15 @@ export default function Router() {
             errorElement: <Error />,
         },
         {
-            path: '/blogs/:blogid',
+            path: '/delete/:blogid',
             element: <Delete/>,
             errorElement: <Error />,
         },
+        {
+            path: '/edit/:blogid',
+            element: <Edit/>,
+            errorElement: <Error />,
+        }
     ])
 
     return (

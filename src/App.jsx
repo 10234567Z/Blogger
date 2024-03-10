@@ -11,15 +11,17 @@ function App() {
   const navigate = useNavigate()
   const [loading, setLoading] = useState(true)
   useEffect(() => {
-    async function fetch() {
+    function fetch() {
       const token = localStorage.getItem('token')
       if (token) {
         dispatch(fetchUser(token))
+        setTimeout(() => {
+          setLoading(false)
+        }, 1000);
       }
       else {
         navigate('/login')
       }
-      setLoading(false)
     }
     fetch()
   }, [])

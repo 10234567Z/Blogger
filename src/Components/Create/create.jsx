@@ -58,8 +58,8 @@ export default function Create() {
                     </div>
                     <div className={styles.publish}>
                         <label htmlFor='public'>Publish</label>
-                        No <input type='radio' id='public' name='public' value={publish} onChange={(e) => setPublish(false)} required />
-                        Yes <input type='radio' id='public' name='public' value={publish} onChange={(e) => setPublish(true)} />
+                        No <input type='radio' id='no' name='public' value={publish} onChange={(e) => setPublish(false)} required />
+                        Yes <input type='radio' id='yes' name='public' value={publish} onChange={(e) => setPublish(true)} />
                     </div>
                     <button type="submit">Create</button>
                 </form>
