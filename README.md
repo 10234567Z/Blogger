@@ -1,6 +1,7 @@
 # Blogger
 Post your blogs on [bloggy](https://bloggy-cyan.vercel.app/) with blogger and let it reach the internet!  
-![image](https://github.com/10234567Z/Bloggy/assets/93607971/a605de94-c8ce-45fc-b780-75a2941add08)
+![image](https://github.com/10234567Z/Blogger/assets/93607971/edb56e7f-c2b8-425f-8e3c-7d441ee03750)
+
 You can access it [here](https://blogger-orpin-theta.vercel.app//)
 
 ## Content
